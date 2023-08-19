@@ -6,9 +6,13 @@ import Divider from '@mui/material/Divider';
 
 import './style.css';
 import { Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
 
 
 function Signin(){
+
+    const navigate = useNavigate();
+
     return(
       <div className='mainClass'>
         <Card className='card'>
@@ -27,7 +31,7 @@ function Signin(){
         <Button className='signin-btn' variant="contained">Sign in</Button>  <br/>
         <Divider> or </Divider>      <br/>
         <center>
-        <Typography variant='h8' className='fontStyle'>New to LinkedIn?  <b style={{ color: '#146bc5'}}>JOIN NOW</b></Typography>
+        <Typography variant='h8' className='fontStyle'>New to LinkedIn?  <b style={{ color: '#146bc5'}} onClick={()=>{ navigate("/signup") }} >JOIN NOW</b></Typography>
         </center>
         </Card> 
         </div>
