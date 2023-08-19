@@ -5,13 +5,14 @@ import Divider from '@mui/material/Divider';
 
 
 import './style.css';
+import { Typography } from '@mui/material';
 
 
-function SignUp(){
+function Signin(){
     return(
       <div className='mainClass'>
         <Card className='card'>
-            <h1 className='fontStyle'>Sign up</h1>
+            <h1 className='fontStyle'>Sign in</h1>
             <p className='fontStyle'>Stay updated on your professional world</p>
         <TextField
           label="Email or Phone"
@@ -21,14 +22,17 @@ function SignUp(){
           label="Password"
           type="password"
         />
+        <h4 className='fontStyle' style={{color: '#146bc5'}}>Forgot Password?</h4>
         <br/>
-        <Button className='signin-btn' variant="contained">Sign Up</Button>  <br/>
+        <Button className='signin-btn' variant="contained">Sign in</Button>  <br/>
         <Divider> or </Divider>      <br/>
-        <Button className='signin-btn' variant="outlined">Login with Google</Button>
+        <center>
+        <Typography variant='h8' className='fontStyle'>New to LinkedIn?  <b style={{ color: '#146bc5'}}>JOIN NOW</b></Typography>
+        </center>
         </Card> 
         </div>
     )
   }
   
   
-  export default SignUp
+  export default Signin
